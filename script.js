@@ -1,28 +1,35 @@
-function loadChapter(chapter) {
+const library = {
+  manhua1: {
+    name: "Manhua 1",
+    chapters: {
+      1: ["images/manhua1/chapter1/page1.jpg", "images/manhua1/chapter1/page2.jpg"],
+      2: ["images/manhua1/chapter2/page1.jpg"]
+    }
+  },
+
+  manhua2: {
+    name: "Manhua 2",
+    chapters: {
+      1: ["images/manhua2/chapter1/page1.jpg"]
+    }
+  }
+};
+
+function loadChapter(manhua, chapter) {
   const reader = document.getElementById("reader");
 
-  reader.innerHTML = `<h2>Chapter ${chapter}</h2><p>No pages uploaded yet.</p>`;
-}
-function filterGenre(genre) {
-  const reader = document.getElementById("reader");
+  const pages = library[manhua].chapters[chapter];
 
-  if (genre === "all") {
-    reader.innerHTML = "<h2>All Chapters</h2><p>Select a chapter from the left.</p>";
+  if (!pages) {
+    reader.innerHTML = "<h2>No chapters found</h2>";
+    return;
   }
 
-  if (genre === "action") {
-    reader.innerHTML = "<h2>Action Genre</h2><p>No action manhua added yet.</p>";
-  }
+  reader.innerHTML = `<h2>${library[manhua].name} - Chapter ${chapter}</h2>`;
 
-  if (genre === "romance") {
-    reader.innerHTML = "<h2>Romance Genre</h2><p>No romance manhua added yet.</p>";
-  }
-
-  if (genre === "fantasy") {
-    reader.innerHTML = "<h2>Fantasy Genre</h2><p>No fantasy manhua added yet.</p>";
-  }
-
-  if (genre === "horror") {
-    reader.innerHTML = "<h2>Horror Genre</h2><p>No horror manhua added yet.</p>";
-  }
+  pages.forEach(page => {
+    const img = document.createElement("img");
+    img.src = page;
+    reader.appendChild(img);
+  });
 }
