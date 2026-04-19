@@ -146,3 +146,31 @@ main::-webkit-scrollbar-thumb {
 main::-webkit-scrollbar-track {
   background: #1a0000;
 }
+/* ANIME GIRL WAVE / FLOAT ANIMATION */
+.welcome img {
+  animation: floatWave 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* floating + subtle wave effect */
+@keyframes floatWave {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
