@@ -1,28 +1,42 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
+  background: linear-gradient(135deg, #120000, #1a0000);
+  color: #ffd700;
 }
 
+/* Header */
 header {
-  background: #1a1a1a;
-  padding: 15px;
+  background: linear-gradient(90deg, #8b0000, #b30000);
+  padding: 18px;
   text-align: center;
-  border-bottom: 2px solid #333;
+  border-bottom: 3px solid #ffd700;
+  box-shadow: 0 0 10px #000;
 }
 
+header h1 {
+  margin: 0;
+  color: #ffd700;
+  letter-spacing: 2px;
+}
+
+/* Layout */
 .container {
   display: flex;
 }
 
 /* Sidebar */
 aside {
-  width: 200px;
-  background: #141414;
+  width: 220px;
+  background: #1a0000;
   padding: 10px;
-  border-right: 1px solid #333;
+  border-right: 2px solid #ffd700;
   height: 100vh;
+}
+
+aside h2 {
+  color: #ffd700;
+  text-align: center;
 }
 
 aside ul {
@@ -31,25 +45,41 @@ aside ul {
 }
 
 aside li {
-  padding: 10px;
+  padding: 12px;
+  margin: 5px 0;
   cursor: pointer;
-  border-bottom: 1px solid #333;
+  background: #2a0000;
+  border-left: 3px solid #ffd700;
+  transition: 0.3s;
+  color: #ffd700;
 }
 
 aside li:hover {
-  background: #222;
+  background: #8b0000;
+  color: white;
 }
 
-/* Reader area */
+/* Reader */
 main {
   flex: 1;
   padding: 20px;
   text-align: center;
 }
 
+main h2 {
+  color: #ffd700;
+}
+
+main p {
+  color: #ffcccc;
+}
+
+/* Images (for future manhua pages) */
 main img {
   width: 100%;
   max-width: 800px;
   margin-bottom: 10px;
   border-radius: 10px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 15px #8b0000;
 }
