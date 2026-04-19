@@ -1,42 +1,46 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #120000, #1a0000);
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #0a0000);
   color: #ffd700;
 }
 
-/* Header */
+/* HEADER (premium glow) */
 header {
-  background: linear-gradient(90deg, #8b0000, #b30000);
-  padding: 18px;
+  background: linear-gradient(90deg, #7a0000, #b30000, #7a0000);
+  padding: 20px;
   text-align: center;
-  border-bottom: 3px solid #ffd700;
-  box-shadow: 0 0 10px #000;
+  border-bottom: 2px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
 }
 
 header h1 {
   margin: 0;
-  color: #ffd700;
-  letter-spacing: 2px;
+  font-size: 26px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #ffd700;
 }
 
-/* Layout */
+/* MAIN LAYOUT */
 .container {
   display: flex;
+  height: calc(100vh - 70px);
 }
 
-/* Sidebar */
+/* SIDEBAR (glass effect) */
 aside {
-  width: 220px;
-  background: #1a0000;
-  padding: 10px;
-  border-right: 2px solid #ffd700;
-  height: 100vh;
+  width: 240px;
+  background: rgba(20, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 15px;
 }
 
 aside h2 {
-  color: #ffd700;
   text-align: center;
+  color: #ffd700;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #000;
 }
 
 aside ul {
@@ -46,40 +50,66 @@ aside ul {
 
 aside li {
   padding: 12px;
-  margin: 5px 0;
+  margin: 8px 0;
   cursor: pointer;
-  background: #2a0000;
-  border-left: 3px solid #ffd700;
-  transition: 0.3s;
+  border-radius: 8px;
+  background: rgba(139, 0, 0, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
   color: #ffd700;
 }
 
 aside li:hover {
-  background: #8b0000;
+  transform: scale(1.05);
+  background: #b30000;
+  box-shadow: 0 0 12px #ffd700;
   color: white;
 }
 
-/* Reader */
+/* READER AREA */
 main {
   flex: 1;
-  padding: 20px;
+  padding: 25px;
+  overflow-y: auto;
   text-align: center;
 }
 
 main h2 {
-  color: #ffd700;
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px #ffd700;
 }
 
 main p {
   color: #ffcccc;
 }
 
-/* Images (for future manhua pages) */
+/* MANHUA PAGES (future-proof) */
 main img {
   width: 100%;
-  max-width: 800px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  max-width: 850px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 12px;
   border: 2px solid #ffd700;
-  box-shadow: 0 0 15px #8b0000;
+  box-shadow: 0 0 25px rgba(179, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+main img:hover {
+  transform: scale(1.01);
+}
+
+/* SCROLLBAR (premium touch) */
+main::-webkit-scrollbar {
+  width: 8px;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 10px;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1a0000;
 }
