@@ -174,3 +174,25 @@ main::-webkit-scrollbar-track {
     transform: translateY(0px) rotate(0deg);
   }
 }
+
+.genres {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.genres button {
+  background: rgba(139, 0, 0, 0.6);
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.genres button:hover {
+  background: #b30000;
+  box-shadow: 0 0 10px #ffd700;
+  transform: scale(1.05);
+}
