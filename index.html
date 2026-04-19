@@ -8,37 +8,50 @@
 
 <body>
 
-<header>
-  <h1>📚 Manhua Library</h1>
-</header>
+  <!-- 🔥 BACKGROUND MUSIC -->
+  <audio id="bgmusic" loop>
+    <source src="music/bg.mp3" type="audio/mpeg">
+  </audio>
 
-<!-- HERO / WELCOME -->
-<div class="welcome">
-  <img src="welcome.png" alt="Welcome">
-  <div class="welcome-text">
-    <h2>Welcome Reader ✨</h2>
-    <p>Choose a manhua to start reading</p>
-  </div>
-</div>
-
-<!-- GRID LIBRARY -->
-<div class="grid">
-
-  <div class="card" onclick="openManhua('manhua1')">
-    <img src="cover1.jpg">
-    <h3>Manhua 1</h3>
+  <!-- MUSIC BUTTON -->
+  <div style="text-align:center; margin-top:10px;">
+    <button onclick="document.getElementById('bgmusic').play()">
+      ▶ Play Music
+    </button>
   </div>
 
-  <div class="card" onclick="openManhua('manhua2')">
-    <img src="cover2.jpg">
-    <h3>Manhua 2</h3>
+  <!-- HEADER -->
+  <header>
+    <h1>📚 Manhua Library</h1>
+  </header>
+
+  <!-- WELCOME ANIME GIRL -->
+  <div class="welcome">
+    <img src="welcome.png" alt="Anime Girl Welcome">
+    <div class="welcome-text">
+      <h2>Welcome, Reader ✨</h2>
+      <p>Choose a manhua and start reading</p>
+    </div>
   </div>
 
-</div>
+  <!-- NETFLIX STYLE GRID -->
+  <div class="grid">
 
-<!-- CHAPTER VIEW -->
-<div id="reader" class="reader"></div>
+    <div class="card" onclick="openManhua('manhua1')">
+      <img src="cover1.jpg" alt="Manhua 1">
+      <h3>Manhua 1</h3>
+    </div>
 
-<script src="script.js"></script>
+    <div class="card" onclick="openManhua('manhua2')">
+      <img src="cover2.jpg" alt="Manhua 2">
+      <h3>Manhua 2</h3>
+    </div>
+
+  </div>
+
+  <!-- READER AREA -->
+  <div id="reader" class="reader"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
